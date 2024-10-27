@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Main Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #222;
+            color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        .navbar {
+            background-color: #333;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .nav-item {
+            padding: 0 15px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 22px;
+            transition: color 0.3s;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+            text-decoration-color: red;
+        }
+
+        .nav-item.active a {
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .intro {
+            padding: 0px;
+            padding-left :110px;
+        }
+
+        .intro2 h1 {
+            color: white;
+            font-size: 50px;
+            margin: 0;
+        }
+
+        .intro2 h2 {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 1200px) {
+            .navbar {
+                padding: 10px 0;
+            }
+
+            .nav-list {
+                justify-content: space-around;
+            }
+
+            .nav-item {
+                padding: 0 10px;
+            }
+
+            a {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 8px 0;
+            }
+
+            .nav-item {
+                padding: 0 8px;
+            }
+
+            a {
+                font-size: 18px;
+            }
+
+            .intro2 h1 {
+                font-size: 40px;
+            }
+
+            .intro2 h2 {
+                font-size: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 8px 0;
+            }
+
+            .nav-item {
+                padding: 0 5px;
+            }
+
+            a {
+                font-size: 16px;
+            }
+
+            .intro2 h1 {
+                font-size: 30px;
+            }
+
+            .intro2 h2 {
+                font-size: 20px;
+            }
+
+            .image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="resume.html">Resume</a></li>
+            <li class="nav-item"><a href="services.html">Services</a></li>
+            <li class="nav-item"><a href="skills.html">Skills</a></li>
+            <li class="nav-item"><a href="blog.html">My Blog</a></li>    
+            <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentLocation = window.location.pathname;
+            const navItems = document.querySelectorAll('.nav-item a');
+
+            navItems.forEach(item => {
+                if (item.getAttribute('href') === currentLocation.split('/').pop()) {
+                    item.parentElement.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <div class="container">
+        <div class="intro">
+            <h5>HELLO</h5>
+        </div>
+        <div class="intro2">
+            <h1>I'M</h1>
+            <h1>PRASAD<br>KULKARNI</h1>
+            <h2>THE CODER/DEVELOPER</h2>
+        </div>
+        <div class="image">
+            <img src="prasad.png" alt="Prasad">
+        </div>
+    </div>
+
+</body>
+</html>
