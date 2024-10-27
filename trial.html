@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <title>Main Page</title>
+    
     <style>
         body {
             margin: 0;
@@ -17,20 +18,10 @@
             color: white;
         }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            display: inline-block;
-        }
-
         .navbar {
             background-color: #333;
             text-align: center;
-            padding: 15px 0;
+            padding: 10px 0;
         }
 
         .nav-list {
@@ -38,26 +29,22 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 0;
+            margin: 0;
+            list-style-type: none;
         }
 
         .nav-item {
             padding: 0 15px;
         }
 
-        a {
+        .nav-item a {
             color: white;
             text-decoration: none;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 22px;
+            font-size: 20px;
             transition: color 0.3s;
         }
 
-        li a:hover {
-            text-decoration: underline;
-            text-decoration-color: red;
-        }
-
-        .nav-item.active a {
+        .nav-item.active a, .nav-item a:hover {
             color: red;
         }
 
@@ -67,21 +54,27 @@
             align-items: center;
             padding: 20px;
             text-align: center;
+            max-width: 100%;
         }
 
-        .intro {
-            padding: 0px;
-            padding-left :110px;
+        .intro h5 {
+            color: orange;
+            font-size: 1.8rem;
+            margin: 0;
         }
 
         .intro2 h1 {
             color: white;
-            font-size: 50px;
-            margin: 0;
+            font-size: 3rem;
+            margin: 10px 0;
+        }
+
+        .intro2 h1.orange {
+            color: orange;
         }
 
         .intro2 h2 {
-            font-size: 30px;
+            font-size: 1.8rem;
             margin: 10px 0;
         }
 
@@ -90,83 +83,82 @@
             height: auto;
         }
 
+        .section-title {
+            font-size: 3rem;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .container1 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: white;
+            text-align: left;
+        }
+
+        .container1 h5 {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        /* Responsive Breakpoints */
         @media (max-width: 1200px) {
-            .navbar {
-                padding: 10px 0;
+            .nav-item a {
+                font-size: 18px;
             }
-
-            .nav-list {
-                justify-content: space-around;
-            }
-
-            .nav-item {
-                padding: 0 10px;
-            }
-
-            a {
-                font-size: 20px;
+            .section-title {
+                font-size: 2.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            .navbar {
-                padding: 8px 0;
+            .nav-item a {
+                font-size: 16px;
             }
-
-            .nav-item {
-                padding: 0 8px;
-            }
-
-            a {
-                font-size: 18px;
-            }
-
             .intro2 h1 {
-                font-size: 40px;
+                font-size: 2.5rem;
             }
-
             .intro2 h2 {
-                font-size: 25px;
+                font-size: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
-            .navbar {
-                padding: 8px 0;
+            .nav-item a {
+                font-size: 14px;
             }
-
-            .nav-item {
-                padding: 0 5px;
-            }
-
-            a {
-                font-size: 16px;
-            }
-
             .intro2 h1 {
-                font-size: 30px;
+                font-size: 2rem;
             }
-
             .intro2 h2 {
-                font-size: 20px;
+                font-size: 1.2rem;
             }
-
-            .image img {
-                width: 100%;
-                height: auto;
+            .section-title {
+                font-size: 2rem;
+                margin: 30px auto;
             }
         }
     </style>
 </head>
 <body>
 
+<div class="video-container">
+
+
+    <video autoplay muted loop id="background-video">
+        <source src="background.mp4" type="video/mp4">
+    </video>
+</div>
+
     <nav class="navbar">
         <ul class="nav-list">
             <li class="nav-item"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
             <li class="nav-item"><a href="resume.html">Resume</a></li>
-            <li class="nav-item"><a href="services.html">Services</a></li>
-            <li class="nav-item"><a href="skills.html">Skills</a></li>
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="#skils">Skills</a></li>
             <li class="nav-item"><a href="blog.html">My Blog</a></li>    
             <li class="nav-item"><a href="contact.html">Contact</a></li>
         </ul>
@@ -187,11 +179,11 @@
 
     <div class="container">
         <div class="intro">
-            <h5>HELLO</h5>
+            <h5 style="color: orange;">HELLOOOO</h5>
         </div>
         <div class="intro2">
             <h1>I'M</h1>
-            <h1>PRASAD<br>KULKARNI</h1>
+            <h1 style="color: orange;">PRASAD<br>KULKARNI</h1>
             <h2>THE CODER/DEVELOPER</h2>
         </div>
         <div class="image">
@@ -199,5 +191,59 @@
         </div>
     </div>
 
+
+
+    <h1 style="margin-left: 1100px; font-size:50px">About</h1>
+
+    <div  id="about" style="padding-top: 110px;" class="container1">
+        <h5>Hey Guys, My Name is Mr. Prasad Sanjay Kulkarni. I am from Maharashtra, where Jalna district is located.</h5>
+        <h5>I completed my 10th at Partur at Yogannad School, where I scored 95 marks in math, which was good for me.</h5>
+        <h5>After 10th, I took admission to Government Polytechnic Ambad, where I completed my Diploma in IT.</h5>
+        <h5>There, I learned C, C++, Data Structures, HTML, Java, JavaScript, PHP, Android, etc.</h5>
+        <h5>I also made lots of projects, with my best project being the ZP Government School Website.</h5>
+    </div>
+
+
+    <div id="skils" class="skils">
+
+    <h1 style="margin-left: 1100px; margin-top: 110px; font-size: 50px;">Skills</h1>
+
+
+        <div class="container">
+                <p class="text"> Full Stack Web Deveoper</p>
+                <p class="text">Android Development</p>
+                <p class="text">Data Stuctures and Algorithms</p>
+                <p class="text">Android Development</p>
+                <p class="text">Java</p>
+                <p class="text">C</p>
+                <p class="text">C++</p>
+                <p class="text">Python</p>
+            </div>
+            <script>
+                const texts = document.querySelectorAll('.text');
+                let index = 0;
+            
+                function showNextText() {
+                    texts.forEach((text, i) => {
+                        text.style.display = i === index ? 'inline-block' : 'none';
+                    });
+                    index = (index + 1) % texts.length;
+                }
+            
+                setInterval(showNextText, 4000); // Change text every 4 seconds
+                showNextText(); // Initial call to show the first text
+            </script>
+
+
+</div> 
+</div>            
+
+<!-- 
+    <div id="projects" style="margin-top: 50px;">
+        <h2>My Projects</h2>
+
+       
+
+    </div> -->
 </body>
 </html>
