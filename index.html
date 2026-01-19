@@ -32,6 +32,7 @@
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
@@ -59,6 +60,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="prasad.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="prasad.ico">
     <link rel="manifest" href="site.webmanifest">
+        <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    important: true
+  }
+</script>
 
 </head>
 <style>
@@ -71,6 +78,21 @@
     object-fit: cover; /* Ensures the video covers the entire area */
     z-index: -1; /* Sends the video behind other content */
 }
+.services-list__item-body {
+    display: none;
+    padding-top: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.services-list__item.is-active .services-list__item-body {
+    display: block;
+}
+
+.services-list__item-header {
+    cursor: pointer;
+}
+
 
 </style>
 
@@ -132,10 +154,7 @@
         <div class="row hero-content">
             <div class="column large-full">
                 <h1>
-                    Hello,  I am Prasad Kulkarni, <br>
-                    a frontend developer & Backend Also<br>
-                    & designer currently <br>
-                    based somewhere.
+                   Hi, I’m Prasad Kulkarni a backend-focused Full-Stack Developer building modern web applications.
                 </h1>
     
                 <ul class="hero-social">
@@ -174,7 +193,7 @@
 
                     <div class="section-intro" data-num="01" data-aos="fade-up">
                         <h3 class="subhead">About Me</h3>
-                        <h1 class="display-1">I'm the kind of person who isn't afraid of challenges</h1>
+                        <h1 class="display-1">I enjoy solving real-world problems and building scalable web applications</h1>
                     </div>
 
                     <div class="profile-pic" data-aos="fade-up">
@@ -185,7 +204,7 @@
                     <h3 data-aos="fade-up">Profile</h3>
 
                     <p data-aos="fade-up">
-                     I am an  Information Technology student at Dr. D.Y. Patil College of Engineering in Pune, India, combines technical skills and creative talent.I am skilled in a variety of programming languages and technologies, including HTML, JavaScript, CSS, C, C++, Java, and MySQL. and has previously completed industrial training in Android Development. I am also actively engages in content creation, running the PSK Facts YouTube channel, which has grown to 20,000 subscribers. Recently,You can reach me via email at prasadkulkarni1809@gmail.com or on LinkedIn [here](https://www.linkedin.com/in/prasad-kulkarni-155251344/).
+                    I am an Information Technology student at Dr. D. Y. Patil College of Engineering, Pune, with hands-on experience in full-stack web development. I work with HTML, CSS, JavaScript, Java, C/C++, MySQL, Node.js, and MongoDB, and have built projects including a backend-focused e-commerce application and a deployed personal portfolio. I have also completed industrial training in Android Development. Alongside development, I run the PSK Facts YouTube channel with 20,000+ subscribers, which has strengthened my communication and content creation skills.
                     </p>
 
                 </div>
@@ -218,263 +237,279 @@
                 </p>
             </div> <!-- end  s-services--leftcol -->
 
-            <div class="column large-6">
-                <ul class="services-list" data-aos="fade-up">
-                    <li class="services-list__item is-active">
-                        <div class="services-list__item-header">
-                            <h5>Educational Websites</h5>
-                        </div>
-                      
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Branding</h5>
-                        </div>
-                  
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Frontend Development</h5>
-                        </div>
-                       
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Backend Developent</h5>
-                        </div>
-                        
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>Ai Based Development</h5>
-                        </div>
-                       
-                    </li> <!-- services-list__item -->
-                    <li class="services-list__item">
-                        <div class="services-list__item-header">
-                            <h5>E-Commerce</h5>
-                        </div>
-                       
-                    </li> <!-- services-list__item -->
-                </ul> <!-- end services-list -->
+         <div class="column large-6">
+    <ul class="services-list" data-aos="fade-up">
+
+        <li class="services-list__item is-active">
+            <div class="services-list__item-header">
+                <h5>Web Application Development</h5>
             </div>
+            <div class="services-list__item-body">
+              
+            
+            </div>
+        </li>
 
-        </div> <!-- s-services__content -->
+        <li class="services-list__item">
+            <div class="services-list__item-header">
+                <h5>Frontend Development</h5>
+            </div>
+            <div class="services-list__item-body">
+                <p>
+                    Creating responsive and user-friendly interfaces with clean layouts
+                    and modern UI practices.
+                </p>
+                <span>HTML, CSS, JavaScript, Tailwind CSS, Bootstrap</span>
+            </div>
+        </li>
 
+        <li class="services-list__item">
+            <div class="services-list__item-header">
+                <h5>Backend Development</h5>
+            </div>
+            <div class="services-list__item-body">
+                <p>
+                    Developing secure and scalable backend systems to handle business
+                    logic, authentication, and data flow.
+                </p>
+                <span>Node.js, Express.js, JWT, bcrypt, MVC Architecture</span>
+            </div>
+        </li>
+
+        <li class="services-list__item">
+            <div class="services-list__item-header">
+                <h5>REST API Development</h5>
+            </div>
+            <div class="services-list__item-body">
+                <p>
+                    Designing and implementing RESTful APIs for smooth communication
+                    between frontend and backend systems.
+                </p>
+                <span>REST APIs, Postman, JSON, Authentication</span>
+            </div>
+        </li>
+
+        <li class="services-list__item">
+            <div class="services-list__item-header">
+                <h5>E-Commerce Applications</h5>
+            </div>
+            <div class="services-list__item-body">
+                <p>
+                    Building e-commerce features including product management, carts,
+                    orders, and basic admin functionality.
+                </p>
+                <span>Node.js, MongoDB, Authentication, Order Management</span>
+            </div>
+        </li>
+
+        <li class="services-list__item">
+            <div class="services-list__item-header">
+                <h5>Database Design & Integration</h5>
+            </div>
+            <div class="services-list__item-body">
+                <p>
+                    Designing efficient database schemas and integrating them with
+                    backend applications.
+                </p>
+                <span>MongoDB, MySQL, CRUD Operations, Schema Design</span>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</div>
     </section> <!-- end s-services -->
 
 
-    <!-- portfolio
-    ================================================== -->
-    <section id="portfolio" class="s-portfolio target-section">
 
-        <div class="row s-portfolio__header">
-            <div class="column large-6 medium-8 tab-full">
-                <div class="section-intro" data-num="03" data-aos="fade-up">
-                    <h3 class="subhead">Portfolio</h3>
-                    <h1 class="display-1">
-                        A selection of recent projects I have worked on.
-                    </h1>
-                </div>
-            </div>
-        </div> <!-- s-porfolio__header -->
+<section id="portfolio" class="py-28 bg-[#0b0f19] text-white">
+  <div class="max-w-7xl mx-auto px-6">
 
-        <div class="row s-porfolio__list block-large-1-2 block-tab-full collapse">
+    <!-- Section Header -->
+    <div class="mb-20 max-w-3xl">
+      <span class="text-orange-400 uppercase tracking-widest text-sm font-medium">
+        Projects
+      </span>
 
-            <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="project1.png" title="Goverment School Website" data-size="1050x700">
-                            <img src="project1.png" 
-                                 srcset="images/portfolio/windows-in-the-city.jpg 1x, images/portfolio/windows-in-the-city@2x.jpg 2x" alt="">
-                        </a>
-                    </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Project 1</div>
-                        <h4 class="folio-item__title">Goverment School Website</h4>
-                    </div>
-                    <a href="project1.png" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>We Build An Website of Goverment Small kids school located at Satona bk maharashtra where i take this website for as an sponsership  for my final year project of diploma </p>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <!-- end column -->
-            <!-- <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="project 1.1.png" title="Building Blocks" data-size="1050x700">
-                            <img src="images/portfolio/building-blocks.jpg" 
-                                 srcset="images/portfolio/building-blocks.jpg 1x, images/portfolio/building-blocks@2x.jpg 2x" alt="">
-                        </a> -->
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    <!-- <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Building Blocks</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div> -->
-            <!-- </div> end column -->
-            <!-- <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-shout-jump.jpg" Title="Shout and Jump" data-size="1050x700">
-                            <img src="images/portfolio/shout-and-jump.jpg" 
-                                 srcset="images/portfolio/shout-and-jump.jpg 1x, images/portfolio/shout-and-jump@2x.jpg 2x" alt="">
-                        </a>
-                    </div> -->
-                    <!-- <div class="folio-item__info">
-                        <div class="folio-item__cat">Branding</div>
-                        <h4 class="folio-item__title">Shout & Jump</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div>
-                </div> -->
-            <!-- </div> end column -->
-            <!-- <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-sand-dunes.jpg" title="Sand Dunes" data-size="1050x700">
-                            <img src="images/portfolio/sand-dunes.jpg" 
-                                 srcset="images/portfolio/sand-dunes.jpg 1x, images/portfolio/sand-dunes@2x.jpg 2x" alt="">
-                        </a>
-                    </div> -->
-                    <!-- <div class="folio-item__info">
-                        <div class="folio-item__cat">Frontend Design</div>
-                        <h4 class="folio-item__title">Sand Dunes</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div> -->
-                <!-- </div> -->
-            <!-- </div> end column -->
-            <!-- <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-woodcraft.jpg" title="Sand Dunes" data-size="1050x700">
-                            <img src="images/portfolio/woodcraft.jpg" 
-                                 srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                        </a> -->
-                    <!-- </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Product Design</div>
-                        <h4 class="folio-item__title">Wooocraft</h4>
-                    </div>
-                    <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div> -->
-                <!-- </div>
-            </div>end column -->
-            <!-- <div class="column" data-aos="fade-up">
-                <div class="folio-item">
-                    <div class="folio-item__thumb">
-                        <a class="folio-item__thumb-link" href="images/portfolio/gallery/g-lamp.jpg" title="The Lamp" data-size="1050x700">
-                            <img src="images/portfolio/lamp.jpg" 
-                                 srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt=""> -->
-                        <!-- </a>  -->
-                    <!-- </div>
-                    <div class="folio-item__info">
-                        <div class="folio-item__cat">Product Design</div>
-                        <h4 class="folio-item__title">The Lamp</h4>
-                    </div>
-                -->
-                    <!-- <a href="https://www.behance.net/" title="Project Link" class="folio-item__project-link">Project Link</a>
-                    <div class="folio-item__caption">
-                        <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                    </div> -->
-                </div>
-            </div> 
-        </div> <!-- folio-list -->
+      <h2 class="text-5xl font-bold mt-4 text-white">
+        Things I’ve Built
+      </h2>
 
-    </section>
+      <p class="text-gray-300 mt-6 text-lg leading-relaxed">
+        A selection of academic and personal projects showcasing my skills
+        in full-stack web development and backend systems.
+      </p>
+    </div>
 
-    <!-- testimonials
-    ================================================== -->
-    <section id="testimonials" class="s-testimonials">
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14">
 
-        <div class="row collapse">
+      <!-- Project Card -->
+      <div class="bg-[#121826] border border-white/10 rounded-2xl overflow-hidden
+                  hover:border-orange-400/50 hover:-translate-y-1
+                  transition-all duration-300">
 
-            <div class="column large-full">
+        <!-- Image -->
+        <div class="relative h-56 bg-black">
+          <img
+            src="project1.png"
+            alt="Government School Website"
+            class="w-full h-full object-cover">
+        </div>
 
-                <div class="testimonial-slider" data-aos="fade-up">
+        <!-- Content -->
+        <div class="p-7">
+          <span class="text-sm uppercase tracking-wider text-orange-400 font-semibold">
+            Web Development
+          </span>
 
-                    <div class="testimonial-slider__slide">
-                        <p>
-                            "At Apple, we believe that technology should empower people to change the world for the better. That’s why we work so hard to put the user in control, to value and protect their privacy, and to build products that enable creativity, innovation, and a more sustainable future."
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Tim Cook</strong>
-                                <span>CEO, Apple</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-    
-                    <div class="testimonial-slider__slide">
-                        <p>
-                            "A lot of times, when you work on something, you think it’s small, but it ends up having a big impact."
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Sundar Pichai</strong>
-                                <span>CEO, Google</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-    
-                    <div class="testimonial-slider__slide">
-                        <p>
-                            Our industry does not respect tradition—it only respects innovation."
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Satya Nadella</strong>
-                                <span>CEO, Microsoft</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-    
-                    <div class="testimonial-slider__slide">
-                        <p>
-                            If you double the number of experiments you do per year, you’re going to double your inventiveness."
-                        </p>
-                        <div class="testimonial-slider__author">
-                            <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
-                            <cite class="testimonial-slider__cite">
-                                <strong>Jeff Bezos</strong>
-                                <span>CEO, Amazon</span>
-                            </cite>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
+          <h3 class="text-2xl font-semibold mt-3 text-white">
+            Government School Website
+          </h3>
 
-                </div> <!-- end testimonial slider -->
-                
-            </div> <!-- end column -->
+          <p class="text-gray-300 mt-4 text-base leading-relaxed">
+            Developed an informational website for a government primary school
+            located in Satona Bk, Maharashtra, as part of my diploma final-year project.
+          </p>
 
-        </div> <!-- end row -->
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2 mt-5 text-sm">
+            <span class="px-3 py-1 bg-black/40 rounded-md">HTML</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">CSS</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">JavaScript</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">Bootstrap</span>
+          </div>
+
+          <!-- Link -->
+          <a href="https://github.com/prasadkulkarni1809/School-Website"
+             target="_blank"
+             rel="noopener"
+             class="inline-block mt-6 text-base text-orange-400 hover:underline font-medium">
+            View Code →
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-[#121826] border border-white/10 rounded-2xl overflow-hidden
+                  hover:border-orange-400/50 hover:-translate-y-1
+                  transition-all duration-300">
+
+        <div class="relative h-56 bg-[#1a2236] flex items-center justify-center
+                    text-gray-400 text-base">
+          Project Screenshot
+        </div>
+
+        <div class="p-7">
+          <span class="text-sm uppercase tracking-wider text-orange-400 font-semibold">
+            Full-Stack
+          </span>
+
+          <h3 class="text-2xl font-semibold mt-3 text-white">
+            E-Commerce Web Application
+          </h3>
+
+          <p class="text-gray-300 mt-4 text-base leading-relaxed">
+            Backend-focused full-stack e-commerce application with authentication,
+            product management, cart, and order workflows.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-5 text-sm">
+            <span class="px-3 py-1 bg-black/40 rounded-md">Node.js</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">Express</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">MongoDB</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">JWT</span>
+          </div>
+
+          <a href="#"
+             class="inline-block mt-6 text-base text-orange-400 hover:underline font-medium">
+            View Project →
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-[#121826] border border-white/10 rounded-2xl overflow-hidden
+                  hover:border-orange-400/50 hover:-translate-y-1
+                  transition-all duration-300">
+
+        <div class="relative h-56 bg-[#1a2236] flex items-center justify-center
+                    text-gray-400 text-base">
+          Project Screenshot
+        </div>
+
+        <div class="p-7">
+          <span class="text-sm uppercase tracking-wider text-orange-400 font-semibold">
+            Backend / Python
+          </span>
+
+          <h3 class="text-2xl font-semibold mt-3 text-white">
+            Face Recognition Attendance System
+          </h3>
+
+          <p class="text-gray-300 mt-4 text-base leading-relaxed">
+            Automated attendance system using face recognition to reduce
+            manual attendance processes for academic use.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-5 text-sm">
+            <span class="px-3 py-1 bg-black/40 rounded-md">Python</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">OpenCV</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">SQL</span>
+          </div>
+
+          <a href="#"
+             class="inline-block mt-6 text-base text-orange-400 hover:underline font-medium">
+            View Details →
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-[#121826] border border-white/10 rounded-2xl overflow-hidden
+                  hover:border-orange-400/50 hover:-translate-y-1
+                  transition-all duration-300">
+
+        <div class="relative h-56 bg-[#1a2236] flex items-center justify-center
+                    text-gray-400 text-base">
+          Project Screenshot
+        </div>
+
+        <div class="p-7">
+          <span class="text-sm uppercase tracking-wider text-orange-400 font-semibold">
+            Personal
+          </span>
+
+          <h3 class="text-2xl font-semibold mt-3 text-white">
+            Portfolio Website
+          </h3>
+
+          <p class="text-gray-300 text-5xl mt-4 text-base leading-relaxed">
+            Personal portfolio website showcasing projects, skills, and experience,
+            built with modern UI and responsive design.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-5 text-sm">
+            <span class="px-3 py-1 bg-black/40 rounded-md">HTML</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">Tailwind CSS</span>
+            <span class="px-3 py-1 bg-black/40 rounded-md">JavaScript</span>
+          </div>
+
+          <a href="https://prasadkulkarni1809.github.io/portfolio.github.io/"
+             target="_blank"
+             rel="noopener"
+             class="inline-block mt-6 text-base text-orange-400 hover:underline font-medium">
+            Visit Site →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- footer
     ================================================== -->
@@ -593,5 +628,21 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        
+document.querySelectorAll('.services-list__item-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+
+        document.querySelectorAll('.services-list__item')
+            .forEach(i => i.classList.remove('is-active'));
+
+        item.classList.add('is-active');
+    });
+});
+</script>
+
+      
 
 </body>
